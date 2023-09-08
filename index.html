@@ -51,6 +51,121 @@
      <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
 
      Outras Meta Tags (se necessário) -->
+
+	 <style>
+		.fab{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background:url(images/logo_whatsapp.png);
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: white;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button:focus{
+  outline: none;
+}
+
+.fab button.main{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  padding-right:5px;
+  margin:0;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab ul li label{
+  margin-right:10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius:3px;
+  height: 18px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity:0;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button.main:active,
+.fab button.main:focus{
+  outline: none;
+  background-color: #7716ff;
+  box-shadow: 0 3px 8px rgba(0,0,0,.5);
+ }
+ 
+.fab button.main:active:before,
+.fab button.main:focus:before{
+  content: '↑';
+}
+
+.fab button.main:active + ul,
+.fab button.main:focus + ul{
+  bottom: 70px;
+}
+
+.fab button.main:active + ul li,
+.fab button.main:focus + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab button.main:active + ul li:hover label,
+.fab button.main:focus + ul li:hover label{
+  opacity: 1;
+}
+	 </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
@@ -69,7 +184,7 @@
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Lab</span></a></li>
 	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Serviços</span></a></li>
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Habilidades</span></a></li>
-	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projetos</span></a></li>
+	          <!--li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projetos</span></a></li-->
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Meu Blog</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contato</span></a></li>
 	        </ul>
@@ -120,7 +235,12 @@
 	      </div>
 	    </div>
     </section>
-
+	<section id="btnZap">
+		<div class="fab">
+				<button class="main">
+			
+		</div>
+	</section>
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
     		<div class="row d-flex">
@@ -382,7 +502,7 @@
 		</section>
  
 
-    <section class="ftco-section ftco-project" id="projects-section">
+    <!--section class="ftco-section ftco-project" id="projects-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
@@ -452,7 +572,7 @@
     			</div>
     		</div>
     	</div>
-    </section>
+    </section-->
 
 
     <section class="ftco-section" id="blog-section">
@@ -672,7 +792,7 @@
                 <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
                 <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Sobre</a></li>
                 <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Serviços </a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projetos</a></li>
+                <!--li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projetos</a></li-->
                 <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contato</a></li>
               </ul>
             </div>
@@ -705,7 +825,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#" target="_blank">lerin</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
