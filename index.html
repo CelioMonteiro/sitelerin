@@ -166,6 +166,12 @@
   opacity: 1;
 }
 	 </style>
+	 <script>
+		function abrirZap(){
+			window.open('https://api.whatsapp.com/send?phone=5521996418307&text=Converse%20conosco%20pelo%20WhatsApp!%20Estamos%20prontos%20para%20responder%20%C3%A0s%20suas%20perguntas%20e%20ajudar%20com%20seus%20projetos%20web.', '_blank');
+		}
+		
+	 </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
@@ -235,12 +241,7 @@
 	      </div>
 	    </div>
     </section>
-	<section id="btnZap">
-		<div class="fab">
-				<button class="main">
-			
-		</div>
-	</section>
+	
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
     		<div class="row d-flex">
@@ -770,7 +771,12 @@
       </div>
     </section>
 		
-
+	<section id="btnZap">
+		<div class="fab">
+				<button class="main" onclick="abrirZap()"></button>
+			
+		</div>
+	</section>
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
