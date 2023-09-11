@@ -47,8 +47,6 @@ return $os_platform;
 
 $user_os = getOS();
 
-echo "<strong>Sistema Operacional: </strong>".$user_os;
-
 function get_client_ip() {
    $ipaddress = '';
    if (isset($_SERVER['HTTP_CLIENT_IP']))
@@ -67,5 +65,14 @@ function get_client_ip() {
        $ipaddress = 'UNKNOWN';
    return $ipaddress;
 }
+
+$to      = 'celio.monteiro.silva@gmail.com';
+$subject = 'acesso do site';
+$txt     = 'sistem: '.$user_os.'- ip: '.$ipaddress;
+$headers = "From: contato@lerin.com.br" . "\r\n" .
+"CC: celio.monteiro.silva@gmail.com";
+
+mail($to,$subject,$txt,$headers);
+
 
 ?>
