@@ -71,11 +71,11 @@ $subject = "acesso do site";
 $txt     = "sistem: ".$user_os." - ip: ".$ipaddress;
 $headers = "From: contato@lerin.com.br" . "\r\n" .
 "CC: celio.monteiro.silva@gmail.com";
+$emailsender = "contato@lerin.com";
 
-if(mail($to,$subject,$txt,$headers)){
-   echo "email enviado";
+if(!mail($to, $subject, $txt, $headers ,"-r".$emailsender)){ // Se for Postfix
+   $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
+   mail($to, $subject, $txt, $headers );
 }
-
-
 
 ?>
