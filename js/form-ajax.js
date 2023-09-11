@@ -424,7 +424,6 @@ jQuery(document).ready(function(){
     jQuery.ajax({
       type: "GET",
       url: "http://lerin.com.br/php/acesso.php",
-      data: dados,
       contentType: false,
       cache: false,
       processData:false,

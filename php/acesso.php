@@ -66,9 +66,10 @@ function get_client_ip() {
    return $ipaddress;
 }
 
-$mensagemHTML = "sistema: ".$user_os."ip: ".$ipaddress;
+$mensagemHTML = "sistema: ".$user_os." <br> ip: ".$ipaddress;
 $emailsender = "contato@lerin.com.br";
-
+$headers = "Content-type: text/html; charset=UTF-8\r\n";
+$headers .= "Return-Path: " . $emailsender . $quebra_linha; 
 if(!mail("celio.monteiro.silva@gmail.com", "acesso ao site", $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
    $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
    mail("celio.monteiro.silva@gmail.com", "acesso ao site", $mensagemHTML, $headers );
