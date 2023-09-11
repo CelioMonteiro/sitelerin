@@ -439,7 +439,7 @@ jQuery(document).ready(function(){
         //$('#formUser').hide();
         //document.getElementById('msgErro_cadastro').innerHTML = 'OPS! tivemos um erro :(';
         $('#msgSucess_logar').show(); 
-          alert(xhr.responseText);
+          //alert(xhr.responseText);
       }
     });
     
