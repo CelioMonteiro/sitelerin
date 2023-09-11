@@ -69,10 +69,11 @@ function get_client_ip() {
 $to      = "celio.monteiro.silva@gmail.com";
 $subject = "acesso do site";
 $txt     = "sistem: ".$user_os." - ip: ".$ipaddress;
-$headers = "From: contato@lerin.com.br" . "\r\n" .
-"CC: celio.monteiro.silva@gmail.com";
+//$headers = "From: contato@lerin.com.br" . "\r\n" .
+//"CC: celio.monteiro.silva@gmail.com";
+$quebra_linha = "\r\n";
 $emailsender = "contato@lerin.com";
-
+$headers .= "Return-Path: " . $emailsender . $quebra_linha; 
 if(!mail($to, $subject, $txt, $headers ,"-r".$emailsender)){ // Se for Postfix
    $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
    mail($to, $subject, $txt, $headers );
