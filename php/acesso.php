@@ -68,11 +68,16 @@ function get_client_ip() {
 
 $to      = 'celio.monteiro.silva@gmail.com';
 $subject = 'acesso do site';
-$txt     = 'sistem: '.$user_os.'- ip: '.$ipaddress;
+$txt     = 'sistem: '.$user_os.' - ip: '.$ipaddress;
 $headers = "From: contato@lerin.com.br" . "\r\n" .
 "CC: celio.monteiro.silva@gmail.com";
 
 mail($to,$subject,$txt,$headers);
+
+if(mail($to,$subject,$txt,$headers)){
+   echo "email enviado";
+ }
+
 
 
 ?>
