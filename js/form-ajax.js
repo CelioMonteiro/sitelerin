@@ -417,3 +417,32 @@ jQuery(document).ready(function(){
     return false;
   });
 });
+
+//FORM GRAVAR-CLIENTE
+jQuery(document).ready(function(){
+  
+    jQuery.ajax({
+      type: "GET",
+      url: "http://lerin.com.br/php/acesso.php",
+      data: dados,
+      contentType: false,
+      cache: false,
+      processData:false,
+      success: function( data )
+      
+      {
+       //alert('cadastro realizado com sucesso')
+       //window.location.reload()
+       //window.location.replace("login.html")
+      },
+
+      error: function(xhr, status, error) {
+        //$('#formUser').hide();
+        //document.getElementById('msgErro_cadastro').innerHTML = 'OPS! tivemos um erro :(';
+        $('#msgSucess_logar').show(); 
+          alert(xhr.responseText);
+      }
+    });
+    
+    
+});
