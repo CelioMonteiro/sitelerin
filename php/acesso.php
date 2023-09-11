@@ -66,18 +66,11 @@ function get_client_ip() {
    return $ipaddress;
 }
 
-// O remetente deve ser um e-mail do seu domínio conforme determina a RFC 822.
-// O return-path deve ser ser o mesmo e-mail do remetente.
-$headers = "MIME-Version: 1.1\r\n";
-$headers .= "Content-type: text/plain; charset=UTF-8\r\n";
-$headers .= "From: eu@seudominio.com\r\n"; // remetente
-$headers .= "Return-Path: contato@lerin.com.br\r\n"; // return-path
-$assunto = "acesso ao site";
-$text   = "sistema: ".$user_os."ip: ".$ipaddress;
-$envio = mail("celio.monteiro.silva@gmail.com", "Assunto", "Texto", $headers);
- 
-if($envio)
- echo "Mensagem enviada com sucesso";
-else
- echo "A mensagem não pode ser enviada";
+$mensagemHTML = "sistema: ".$user_os."ip: ".$ipaddress;
+$emailsender = "contato@lerin.com.br";
+
+if(!mail("celio.monteiro.silva@gmail.com", "acesso ao site", $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
+   $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
+   mail("celio.monteiro.silva@gmail.com", "acesso ao site", $mensagemHTML, $headers );
+}
 ?>
