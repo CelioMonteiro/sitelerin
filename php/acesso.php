@@ -66,17 +66,18 @@ function get_client_ip() {
    return $ipaddress;
 }
 
-$to      = "celio.monteiro.silva@gmail.com";
-$subject = "acesso do site";
-$txt     = "sistem: ".$user_os." - ip: ".$ipaddress;
-//$headers = "From: contato@lerin.com.br" . "\r\n" .
-//"CC: celio.monteiro.silva@gmail.com";
-$quebra_linha = "\r\n";
-$emailsender = "contato@lerin.com";
-$headers .= "Return-Path: " . $emailsender . $quebra_linha; 
-if(!mail($to, $subject, $txt, $headers ,"-r".$emailsender)){ // Se for Postfix
-   $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
-   mail($to, $subject, $txt, $headers );
-}
-
+// O remetente deve ser um e-mail do seu domínio conforme determina a RFC 822.
+// O return-path deve ser ser o mesmo e-mail do remetente.
+$headers = "MIME-Version: 1.1\r\n";
+$headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+$headers .= "From: eu@seudominio.com\r\n"; // remetente
+$headers .= "Return-Path: contato@lerin.com.br\r\n"; // return-path
+$assunto = "acesso ao site";
+$text   = "sistema: ".$user_os."ip: ".$ipaddress;
+$envio = mail("celio.monteiro.silva@gmail.com", "Assunto", "Texto", $headers);
+ 
+if($envio)
+ echo "Mensagem enviada com sucesso";
+else
+ echo "A mensagem não pode ser enviada";
 ?>
