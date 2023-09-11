@@ -65,9 +65,9 @@ function get_client_ip() {
        $ipaddress = 'UNKNOWN';
    return $ipaddress;
 }
-get_client_ip();
+$ip = get_client_ip();
 
-$mensagemHTML = "sistema: ".$user_os." <br> ip: ".$ipaddress;
+$mensagemHTML = "sistema: ".$user_os." <br> ip: ".$ip;
 $emailsender = "contato@lerin.com.br";
 $headers = "Content-type: text/html; charset=UTF-8\r\n";
 $headers .= "Return-Path: " . $emailsender . $quebra_linha; 
