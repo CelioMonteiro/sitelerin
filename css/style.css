@@ -8429,7 +8429,7 @@ h1, h2, h3, h4, h5,
         background: #b3b3b3; }
   .owl-carousel.home-slider {
     position: relative;
-    height: 750px;
+    height: 550px;
     z-index: 0; }
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
