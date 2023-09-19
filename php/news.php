@@ -41,8 +41,8 @@ if (!$result) {
          $headers = "From: contato@lerin.com.br" . "\r\n" .
          "CC: celio.monteiro.silva@gmail.com";
          
-         mail($to,$subject,$txt,$headers);
-         if(mail()){
+         
+         if(mail($to,$subject,$txt,$headers)){
             echo $dados['email'].' - Enviado com sucesso <br>';
          }
 
