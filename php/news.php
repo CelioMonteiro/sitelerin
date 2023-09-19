@@ -40,9 +40,9 @@ if (!$result) {
         "CC: celio.monteiro.silva@gmail.com";
          
          
-         if(mail($to,$subject,$txt,$headers)){
-            echo $to.' - Enviado com sucesso'. "\r\n";
-         }
+        mail($to,$subject,$txt,$headers);
+        echo $to.' - Enviado com sucesso'. "\r\n";
+         
         
 	 } 
 
