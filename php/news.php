@@ -1,6 +1,6 @@
 <?php 
 header("Access-Control-Allow-Origin: *");
-header('Content-Type:' . "text/plain");
+header('Content-Type:' . "text/html");
 
 include_once 'conexao.php';
 
@@ -17,7 +17,7 @@ if(!$conn) {
 	echo '}]';
  }else {
 	//SQL de BUSCA LISTAGEM
-	$sql = "SELECT * FROM tab_clientes WHERE idUser = '$idUser' ORDER BY idcliente DESC";
+	$sql = "SELECT * FROM news";
 	$result = $conn->query($sql);
 	$n =mysqli_num_rows($result);
  
@@ -42,7 +42,10 @@ if (!$result) {
          "CC: celio.monteiro.silva@gmail.com";
          
          mail($to,$subject,$txt,$headers);
-	 	//$dados[$i]['Nome'] = utf8_encode($dados[$i]['Nome']);
+         if(mail()){
+            echo $dados['email'].' - Enviado com sucesso <br>';
+         }
+
 	 } 
 
  	echo json_encode($dados, JSON_PRETTY_PRINT); 
