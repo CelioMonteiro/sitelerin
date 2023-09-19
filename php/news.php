@@ -34,8 +34,9 @@ if (!$result) {
 	 //Mesclar resultados em um array
 	 for($i = 0; $i<$n; $i++) { 
 	 	 $dados[] = $result -> fetch_assoc(); 
-         $to      = $dados['email'];
-         echo $to.'<br>';
+        // $to      = $dados['email'];
+        var_dump($dados);
+        //echo $to.'<br>';
          /*
          $subject = 'Lerin - Desenvolvimento WEB';
          $txt     = 'Olá, pessoal apaixonado por programação! Gostaria de compartilhar nossa parceria com a Lerin - especialistas em desenvolvimento web. Se você tem projetos incríveis em mente, visite-nos em lerin.com.br. Estamos aqui para tornar suas ideias realidade e elevar seu próximo projeto ao próximo nível!
