@@ -52,7 +52,7 @@ if (!$result) {
 
 	 } 
 
- 	echo json_encode($dados, JSON_PRETTY_PRINT); 
+ 	//echo json_encode($dados, JSON_PRETTY_PRINT); 
  } 
 }
 ?>
