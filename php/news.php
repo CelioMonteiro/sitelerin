@@ -4,8 +4,6 @@ header('Content-Type:' . "text/html");
 
 include_once 'conexao.php';
 
-$idUser = $_GET['idUser'];
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
