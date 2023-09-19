@@ -33,7 +33,7 @@ if (!$result) {
 	 
 	 //Mesclar resultados em um array
 	 for($i = 0; $i<$n; $i++) { 
-	 	 $dados[] = $result -> fetch_assoc(); 
+	 	 $dados = $result -> fetch_assoc(); 
         // $to      = $dados['email'];
         var_dump($dados);
         //echo $to.'<br>';
