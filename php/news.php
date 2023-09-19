@@ -43,7 +43,7 @@ if (!$result) {
          
          
          if(mail($to,$subject,$txt,$headers)){
-            echo $dados['email'].' - Enviado com sucesso <br>'. "\r\n";
+            echo $to.' - Enviado com sucesso'. "\r\n";
          }
         
 	 } 
