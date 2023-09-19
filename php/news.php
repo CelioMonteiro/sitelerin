@@ -31,17 +31,23 @@ if (!$result) {
 	 
 	 //Mesclar resultados em um array
 	 for($i = 0; $i<$n; $i++) { 
-	 	 $dados = $result -> fetch_assoc(); 
+	 	$dados = $result -> fetch_assoc(); 
         $to      = $dados['email'];
         $subject = 'Lerin - Desenvolvimento WEB';
-        $txt     = 'Olá, pessoal apaixonado por programação! Gostaria de compartilhar nossa parceria com a Lerin - especialistas em desenvolvimento web. Se você tem projetos incríveis em mente, visite-nos em lerin.com.br. Estamos aqui para tornar suas ideias realidade e elevar seu próximo projeto ao próximo nível!
+        $mensagemHTML     = 'Olá, pessoal apaixonado por programação! Gostaria de compartilhar nossa parceria com a Lerin - especialistas em desenvolvimento web. Se você tem projetos incríveis em mente, visite-nos em lerin.com.br. Estamos aqui para tornar suas ideias realidade e elevar seu próximo projeto ao próximo nível!
         https://lerin.com.br';
-        $headers = "From: contato@lerin.com.br" . "\r\n" .
-        "CC: celio.monteiro.silva@gmail.com";
+        
+        $emailsender = "contato@lerin.com.br";
+        $headers = "Content-type: text/html; charset=UTF-8\r\n";
+        $headers .= "Return-Path: " . $emailsender . $quebra_linha; 
+        if(!mail($to, $subject, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
+            $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
+            mail("celio.monteiro.silva@gmail.com", $subject, $mensagemHTML, $headers );
+            echo $to.' - Enviado com sucesso'. "\r\n";
+        
+        }
          
          
-        mail($to,$subject,$txt,$headers);
-        echo $to.' - Enviado com sucesso'. "\r\n";
          
         
 	 } 
