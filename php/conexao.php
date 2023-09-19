@@ -1,6 +1,6 @@
 <?php 
-	$servername = "superlerin";
+	$servername = "superlerin.mysql.dbaas.com.br";
 	$username = "superlerin";
 	$password = "Superlerin1@";
-	$dbname = "lerin";
+	$dbname = "superlerin";
 ?>
