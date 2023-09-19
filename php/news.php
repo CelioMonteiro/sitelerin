@@ -43,11 +43,11 @@ if (!$result) {
         if(!mail($to, $subject, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
             $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
             mail("celio.monteiro.silva@gmail.com", $subject, $mensagemHTML, $headers );
-            echo $to.' - Enviado com sucesso'. "\r\n";
+           
         
         }
          
-         
+        echo $to.' - Enviado com sucesso'. "\r\n"; 
          
         
 	 } 
