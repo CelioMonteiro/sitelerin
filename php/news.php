@@ -32,11 +32,12 @@ if (!$result) {
 	 //Mesclar resultados em um array
 	 for($i = 0; $i<$n; $i++) { 
 	 	$dados = $result -> fetch_assoc(); 
-        $to      = $dados['email'];
-        $subject = 'Lerin - Desenvolvimento WEB';
-        $mensagemHTML     = 'Olá, pessoal apaixonado por programação! Gostaria de compartilhar nossa parceria com a Lerin - especialistas em desenvolvimento web. Se você tem projetos incríveis em mente, visite-nos em lerin.com.br. Estamos aqui para tornar suas ideias realidade e elevar seu próximo projeto ao próximo nível!
-        https://lerin.com.br';
+        //$to      = $dados['email'];
         
+		$to = 'celio.monteiro.silva@gmail.com';
+		$subject = 'Lerin - Desenvolvimento WEB';
+        $mensagemHTML = file_get_contents($_GET['http://lerin.com.br/email.html']);
+		
         $emailsender = "contato@lerin.com.br";
         $headers = "Content-type: text/html; charset=UTF-8\r\n";
         $headers .= "Return-Path: " . $emailsender . "\r\n"; 
