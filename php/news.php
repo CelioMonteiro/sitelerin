@@ -15,7 +15,7 @@ if(!$conn) {
 	echo '}]';
  }else {
 	//SQL de BUSCA LISTAGEM
-	$sql = "SELECT * FROM news_restaurante";
+	$sql = "SELECT * FROM news_restaurante limit 1";
 	$result = $conn->query($sql);
 	$n =mysqli_num_rows($result);
  
