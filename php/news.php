@@ -36,8 +36,8 @@ if (!$result) {
         
 		$to = 'celio.monteiro.silva@gmail.com';
 		$subject = 'Lerin - Desenvolvimento WEB';
-        $mensagemHTML = file_get_contents($_GET['https://lerin.com.br/email.html']);
-		
+    	$mensagemHTML = '<!DOCTYPE html><html lang="en"><head><title>Lerin - Desenvolvimento de SITES - WEB - APPs</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"></head><body><h1>teste email</h1><p>copor do email</p></body></html>';
+		//$mensagemHTML = 'teste';
         $emailsender = "contato@lerin.com.br";
         $headers = "Content-type: text/html; charset=UTF-8\r\n";
         $headers .= "Return-Path: " . $emailsender . "\r\n"; 
