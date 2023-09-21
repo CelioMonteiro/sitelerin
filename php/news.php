@@ -36,7 +36,7 @@ if (!$result) {
         
 		$to = 'celio.monteiro.silva@gmail.com';
 		$subject = 'Lerin - Desenvolvimento WEB';
-        $mensagemHTML = file_get_contents($_GET['http://lerin.com.br/email.html']);
+        $mensagemHTML = file_get_contents($_GET['https://lerin.com.br/email.html']);
 		
         $emailsender = "contato@lerin.com.br";
         $headers = "Content-type: text/html; charset=UTF-8\r\n";
