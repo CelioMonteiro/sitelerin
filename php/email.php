@@ -13,7 +13,6 @@
     
  
  }
-  
 
 echo json_encode('enviado com sucesso!', JSON_PRETTY_PRINT); 
 ?>
