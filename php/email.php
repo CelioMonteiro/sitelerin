@@ -17,5 +17,5 @@ header('Content-Type:' . "text/html");
  
  }
 
-echo json_encode('enviado com sucesso!', JSON_PRETTY_PRINT); 
+echo 'enviado com sucesso!'; 
 ?>
