@@ -452,7 +452,7 @@ jQuery(document).ready(function(){
     var dados = jQuery( this ).serialize();
     jQuery.ajax({
       type: "POST",
-      url: "https://www.superlerin.com.br/php/email.php",
+      url: "https://www.lerin.com.br/php/email.php",
       data: dados,
       success: function(data)
       {
