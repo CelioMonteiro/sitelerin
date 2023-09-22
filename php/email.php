@@ -1,7 +1,7 @@
 <?php
 $to               = 'contato@lerin.com.br';
 $subject          = $_POST['assunto'];
-$mensagemHTML     = 'nome: '.$_POST['nome']."\r\n"."email? ".$_POST['email']."\r\n".$_POST['mensagem'];
+$mensagemHTML     = 'nome: '.$_POST['nome']."\r\n"."email: ".$_POST['email']."\r\n".$_POST['mensagem'];
 
 $emailsender = "contato@lerin.com.br";
 $headers = "Content-type: text/html; charset=UTF-8\r\n";
