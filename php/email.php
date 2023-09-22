@@ -5,8 +5,8 @@ header('Content-Type:' . "text/html");
  //$to      = $dados['email'];
  $to = 'contato@lerin.com.br';
  $subject = 'Lerin - Desenvolvimento WEB';
- $mensagemHTML = 'Nome: - '.$_POST["nome"].'\r\n'.'email: '.$_POST['email'].'\r\n'.'Mesangem: '.'\r\n'.$_POST['mensagem: '];
- $mensagemHTML = 'teste'
+ //$mensagemHTML = 'Nome: - '.$_POST["nome"].'\r\n'.'email: '.$_POST['email'].'\r\n'.'Mesangem: '.'\r\n'.$_POST['mensagem: '];
+ $mensagemHTML = 'teste';
  $emailsender = "contato@lerin.com.br";
  $headers = "Content-type: text/html; charset=UTF-8\r\n";
  $headers .= "Return-Path: " . $emailsender . "\r\n"; 
