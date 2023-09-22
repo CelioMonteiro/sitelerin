@@ -7,6 +7,6 @@ $headers = "From: contato@lerin.com.br" . "\r\n" .
 
 mail($to,$subject,$txt,$headers);
 
- 
+ echo 'email enviado com sucesso ';
 
 ?>

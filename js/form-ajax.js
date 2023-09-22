@@ -445,3 +445,25 @@ jQuery(document).ready(function(){
     
     
 });
+
+//Enviar contato site
+jQuery(document).ready(function(){
+  jQuery('#contato').submit(function(){
+    var dados = jQuery( this ).serialize();
+    jQuery.ajax({
+      type: "POST",
+      url: "https://www.superlerin.com.br/php/email.php",
+      data: dados,
+      success: function(data)
+      {
+        console.log(data);
+        
+      },
+      error: function(xhr, status, error) {
+        alert(xhr.responseText);
+      }
+    });
+    
+    return false;
+  });
+});
