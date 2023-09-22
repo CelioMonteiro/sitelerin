@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Content-Type:' . "text/html");
+
  //$to      = $dados['email'];
  $to = 'celio.monteiro.silva@gmail.com';
  $subject = 'Lerin - Desenvolvimento WEB';
