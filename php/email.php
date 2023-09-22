@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header('Content-Type:' . "text/html");
 
  //$to      = $dados['email'];
- $to = 'celio.monteiro.silva@gmail.com';
+ $to = 'contato@lerin.com.br';
  $subject = 'Lerin - Desenvolvimento WEB';
  $mensagemHTML = 'teste';
  $emailsender = "contato@lerin.com.br";
