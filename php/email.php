@@ -13,4 +13,6 @@ if(!mail($to, $subject, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for 
     
 
 }
+
+echo 'email enviado com sucesso ';
 ?>
