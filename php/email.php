@@ -10,7 +10,7 @@ header('Content-Type:' . "text/html");
  $email     = $_POST['email'];
  $mensagem  = $_POST['mensagem'];  
  
- $mensagemHTML = 'Nome: - '.$nome.' - '.'email: '.$email.' - '.'Mesangem: '.' - '.$mensagem;
+ $mensagemHTML = 'Nome: <br> '.$nome.' <br> '.'email: '.$email.' <br> '.'Mesangem: '.' - '.$mensagem;
  //$mensagemHTML = 'teste';
  $emailsender = "contato@lerin.com.br";
  $headers = "Content-type: text/html; charset=UTF-8\r\n";
