@@ -14,7 +14,6 @@
  
  }
   
- echo $to.' - Enviado com sucesso'. "\r\n"; 
 
 echo json_encode('enviado com sucesso!', JSON_PRETTY_PRINT); 
 ?>
