@@ -14,5 +14,5 @@ if(!mail($to, $subject, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for 
 
 }
 
-echo 'email enviado com sucesso ';
+echo json_encode('enviado com sucesso!', JSON_PRETTY_PRINT); 
 ?>
