@@ -456,7 +456,7 @@ jQuery(document).ready(function(){
       data: dados,
       success: function(data)
       {
-        console.log(data);
+        alert(data);
         
       },
       error: function(xhr, status, error) {
