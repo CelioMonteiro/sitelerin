@@ -56,4 +56,5 @@ if (!$result) {
 
  } 
 }
+echo $i;
 ?>
